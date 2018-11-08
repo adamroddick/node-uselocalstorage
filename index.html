@@ -1,0 +1,14 @@
+<i>Psst.. check your browsers local storage</i>
+
+<script>
+
+async function getJson() {
+    let response = await fetch('/json');
+    // console.log(response)
+    let json = JSON.stringify(await response.json())
+    localStorage.setItem('json', json)
+}
+
+getJson();
+  
+  </script>
